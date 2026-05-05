@@ -1,0 +1,98 @@
+❓1. What is the aim of this practical?
+
+👉 To predict future stock prices using Recurrent Neural Network (LSTM) based on past data.
+
+❓2. What type of problem is this?
+
+👉 Time Series Prediction
+Because data is sequential (depends on time).
+
+❓3. Why not use normal Neural Network?
+
+👉 Normal NN:
+
+Cannot remember past data
+
+👉 RNN/LSTM:
+
+Has memory
+Can learn from previous time steps
+❓4. What is an RNN?
+
+👉 A neural network that processes data sequentially and maintains memory of previous inputs.
+
+❓5. What is LSTM?
+
+👉 A special type of RNN that can remember long-term dependencies using gates.
+
+❓6. Why use LSTM instead of simple RNN?
+
+👉 Because simple RNN suffers from:
+
+Vanishing gradient problem
+Cannot remember long sequences
+
+👉 LSTM solves this.
+
+❓7. What is time series data?
+
+👉 Data where values depend on time order, like stock prices, temperature, etc.
+
+❓8. Why do we use only ‘Open’ price?
+
+👉 For simplicity — to predict one variable.
+(You could use more features for better accuracy.)
+
+❓9. Why do we scale the data?
+
+👉 To bring values between 0 and 1 for:
+
+Faster training
+Better performance
+❓10. What is MinMaxScaler?
+
+👉 It scales data between 0 and 1.
+
+❓11. What is sequence creation?
+
+👉 Creating input-output pairs like:
+
+Past 60 days → Next day price
+❓12. Why 60 timesteps?
+
+👉 It means model looks at last 60 days to predict next value.
+
+👉 It’s a hyperparameter (can be changed).
+
+❓13. What is the shape (1198, 60, 1)?
+
+👉
+
+1198 samples
+60 timesteps
+1 feature (price)
+❓14. What does Input(shape=(60,1)) mean?
+
+👉 Each input has:
+
+60 time steps
+1 value per step
+❓15. What does LSTM(50) mean?
+
+👉 LSTM layer with 50 neurons (units).
+
+❓16. What does Dense(1) do?
+
+👉 Outputs single value (predicted price).
+
+❓17. Why use mean_squared_error loss?
+
+👉 Because it is a regression problem (continuous values).
+
+❓18. What is an epoch?
+
+👉 One complete pass over the dataset.
+
+❓19. What is batch size?
+
+👉 Number of samples processed at once (32 here).
