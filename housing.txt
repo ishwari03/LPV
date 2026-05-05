@@ -1,0 +1,110 @@
+❓1. What is the aim of this practical?
+
+👉 To predict house prices using:
+
+Linear Regression
+Deep Neural Network (DNN)
+and compare their performance.
+❓2. What is the target variable?
+
+👉 medv
+(Median value of houses)
+
+❓3. Why do we handle missing values?
+
+👉 ML models cannot process null values, so we replace them with mean.
+
+❓4. What is train-test split?
+
+👉 Dividing dataset into:
+
+Training set (80%) → for learning
+Testing set (20%) → for evaluation
+❓5. Why do we use normalization (StandardScaler)?
+
+👉 To bring all features to the same scale (mean = 0, std = 1), which improves model performance, especially for DNN.
+
+❓6. What is Linear Regression?
+
+👉 A simple algorithm that models a linear relationship between input and output.
+
+❓7. What is a Deep Neural Network?
+
+👉 A model with multiple layers of neurons that can learn complex non-linear relationships.
+
+❓8. Why use ReLU activation?
+
+👉 It introduces non-linearity and avoids vanishing gradient problem.
+
+❓9. Why is output layer Dense(1)?
+
+👉 Because we are predicting a single continuous value (price).
+
+❓10. What is an epoch?
+
+👉 One complete pass of the training data through the model.
+
+❓11. What is batch size?
+
+👉 Number of samples processed before updating weights (here: 16).
+
+❓12. What is optimizer (Adam)?
+
+👉 Algorithm used to update model weights to minimize loss.
+
+❓13. What is MSE?
+
+👉 Mean Squared Error — average of squared differences between actual and predicted values.
+
+❓14. What is MAE?
+
+👉 Mean Absolute Error — average absolute difference between actual and predicted values.
+
+❓15. Which model performed better?
+
+👉 DNN (lower MSE and MAE).
+
+❓16. Why did DNN perform better?
+
+👉 Because it captures non-linear relationships, unlike Linear Regression.
+
+❓17. What does the scatter plot show?
+
+👉 Relationship between actual and predicted values.
+
+❓18. What does the diagonal line represent?
+
+👉 Perfect prediction line (y = x).
+
+❓19. How to identify better model from graph?
+
+👉 Model whose points are closer to the diagonal line is better.
+
+❓20. Can Linear Regression outperform DNN?
+
+👉 Yes, for small or simple datasets where relationships are mostly linear.
+
+⚡ Bonus tricky viva questions (they love these)
+❓21. Why not use sigmoid instead of ReLU?
+
+👉 Sigmoid causes vanishing gradient; ReLU is faster and more efficient.
+
+❓22. What happens if we don’t normalize data?
+
+👉 DNN training becomes slow and unstable.
+
+❓23. What is overfitting?
+
+👉 Model performs well on training data but poorly on unseen data.
+
+❓24. How to reduce overfitting?
+
+👉
+
+More data
+Dropout
+Regularization
+Early stopping
+❓25. Why compare with Linear Regression?
+
+👉 To show improvement of advanced models over basic ones.
