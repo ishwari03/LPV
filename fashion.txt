@@ -1,0 +1,175 @@
+❓1. What is the aim of this practical?
+
+👉 To classify fashion images into different categories using a Convolutional Neural Network (CNN).
+
+❓2. What type of problem is this?
+
+👉 Multi-class classification
+
+👉 Because:
+
+There are 10 classes (T-shirt, shoe, etc.)
+❓3. Why use CNN instead of normal Neural Network?
+
+👉 Normal NN:
+
+Cannot handle spatial structure of images
+
+👉 CNN:
+
+Preserves spatial relationships
+Extracts features like edges, shapes
+❓4. What is CNN?
+
+👉 A neural network designed for image data, using convolution operations to extract features.
+
+❓5. What is convolution?
+
+👉 A process where a filter (kernel) slides over the image to detect patterns.
+
+❓6. What is a filter (kernel)?
+
+👉 A small matrix (e.g., 3×3) used to detect features like edges, textures.
+
+❓7. What does Conv2D(32, (3,3)) mean?
+
+👉
+
+32 filters
+each filter size = 3×3
+
+👉 It produces 32 feature maps.
+
+❓8. What is MaxPooling?
+
+👉 Reduces image size by taking maximum value in a region.
+
+👉 Example:
+
+[1 3]
+[2 4] → 4
+❓9. Why use MaxPooling?
+
+👉
+
+Reduces computation
+Keeps important features
+Prevents overfitting
+❓10. What is Flatten layer?
+
+👉 Converts 2D feature maps into 1D vector.
+
+❓11. What is Dense layer?
+
+👉 Fully connected layer used for final classification.
+
+❓12. Why use ReLU activation?
+
+👉
+
+Introduces non-linearity
+Avoids vanishing gradient
+Faster training
+❓13. Why use Softmax in output layer?
+
+👉 Converts outputs into probabilities for multiple classes.
+
+❓14. What does Softmax output look like?
+[0.1, 0.7, 0.05, ...]
+
+👉 Highest value = predicted class
+
+❓15. Why 10 neurons in output layer?
+
+👉 Because dataset has 10 classes
+
+❓16. What is one-hot encoding?
+
+👉 Converts label into vector:
+
+3 → [0,0,0,1,0,0,0,0,0,0]
+❓17. Why use categorical_crossentropy?
+
+👉 Because:
+
+Multi-class classification
+One-hot encoded labels
+❓18. What is Dropout?
+
+👉 Randomly disables neurons during training.
+
+👉 Helps prevent overfitting
+
+❓19. What is overfitting?
+
+👉 Model performs well on training data but poorly on new data.
+
+❓20. What is accuracy?
+
+👉 Percentage of correct predictions.
+
+🔥 INTERMEDIATE QUESTIONS
+❓21. Why normalize data?
+
+👉 Convert pixel values from 0–255 → 0–1 for better training.
+
+❓22. What is input shape (28,28,1)?
+
+👉
+
+28×28 → image size
+1 → grayscale channel
+❓23. What are feature maps?
+
+👉 Outputs produced by convolution layers representing detected features.
+
+❓24. What happens after each Conv layer?
+
+👉 Image becomes:
+
+Smaller
+More feature-rich
+❓25. What is batch size?
+
+👉 Number of samples processed at once (128 here).
+
+❓26. What is epoch?
+
+👉 One full pass through dataset.
+
+🔥 TRICKY QUESTIONS (VERY COMMON)
+❓27. Why not use sigmoid instead of softmax?
+
+👉
+
+Sigmoid → binary classification
+Softmax → multi-class classification
+❓28. What happens if you remove pooling layer?
+
+👉
+
+Higher computation
+Risk of overfitting
+Slower model
+❓29. Why CNN is better for images?
+
+👉 Because it:
+
+Uses local connectivity
+Shares weights
+Captures spatial patterns
+❓30. What is stride?
+
+👉 Step size of filter movement across image.
+
+❓31. What is padding?
+
+👉 Adding zeros around image to preserve size.
+
+❓32. Why does model accuracy increase with epochs?
+
+👉 Because model learns patterns gradually.
+
+❓33. Can CNN be used for non-image data?
+
+👉 Yes, but mainly used for image/video tasks.
